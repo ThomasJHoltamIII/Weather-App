@@ -14,23 +14,23 @@
     <aside>
         <h1 id="citySearch">Search For A City:</h1>
         <input id="input" type="text" placeholder="Search A City">
-        <button id="searchBtn" type="submit">Search</button>
-        <ul id="pastSearches">
+        <button id="searchBtn" type="submit" class="dataOne">Search</button>
+        <ul id="pastSearches" class="lastLog">
         </ul>
     </aside>
 
     <main>
         <div>
             <h2 id="city currentDate"></h2>
-            <ul>
+            <ul id="weatherInfo">
                 <li id="currentTemp"></li>
                 <li id="currentWind"></li>
                 <li id="currentHumidity"></li>
             </ul>
         </div>
         
-        <label>5-Day Forecast:</label>
-        <div>
+        <label id="forecast">5-Day Forecast:</label>
+        <div id="cards">
             <card id="day1"></card>
             <card id="day2"></card>
             <card id="day3"></card>
@@ -39,6 +39,8 @@
         </div>
     </main>
     
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
     <script src="./Assets/script.js"></script>
 </body>
 </html>

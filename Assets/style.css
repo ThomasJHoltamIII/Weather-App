@@ -1,33 +1,86 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 #header {
-    font-size: 50px;
-    color: aliceblue;
-    background-image: linear-gradient(to right, rgb(0, 38, 255) , rgb(140, 0, 255));
-    text-align: center;
-    height: 75px;
+  background: linear-gradient(to right, #3498db, #6cb1ea);
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  padding: 20px;
+}
+
+aside {
+  background: #f0f0f0;
+  padding: 20px;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  float: left;
 }
 
 #citySearch {
-    font-size: 30px;
+  font-size: 1.5em;
+}
+
+#input {
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 #searchBtn {
-  background-color: #c2fbd7;
-  border-radius: 100px;
-  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
-  color: green;
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 15px;
   cursor: pointer;
-  display: inline-block;
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-  padding: 7px 20px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 250ms;
-  border: 0;
-  font-size: 16px;
+  border: none;
 }
 
-#searchBtn:hover {
-  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+#pastSearches {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
+.lastLog li {
+  background: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
 
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#weatherInfo {
+  background: #f0f0f0;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+#forecast {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#day1, #day2, #day3, #day4, #day5 {
+  background: #f0f0f0;
+  padding: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  width: calc(20% - 10px);
+  box-sizing: border-box;
+}
