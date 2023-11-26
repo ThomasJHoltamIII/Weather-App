@@ -1,7 +1,11 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+}
+
+img {
+  background-color: #fff;
 }
 
 #header {
@@ -57,7 +61,11 @@ main {
   padding: 20px;
 }
 
-#currentIcon, #currentTemp, #currentWind, #currentHumidity, #currentDate {
+#currentIcon,
+#currentTemp,
+#currentWind,
+#currentHumidity,
+#currentDate {
   background-color: white;
   text-align: center;
   padding: 5px;
@@ -88,11 +96,20 @@ main {
   justify-content: space-between;
 }
 
-#day1, #day2, #day3, #day4, #day5 {
-  background: #f0f0f0;
-  padding: 20px;
+#day1,
+#day2,
+#day3,
+#day4,
+#day5 {
+  background: white;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
   width: calc(20% - 10px);
   box-sizing: border-box;
+  font-size: small;
+  text-align: center;
+}
+
+.reSearch:hover {
+  cursor: pointer;
 }

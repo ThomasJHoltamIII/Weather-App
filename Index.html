@@ -1,94 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Assets/style.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Assets/style.css" />
     <title>Weather App</title>
-</head>
-<body>
+  </head>
+  <body>
     <header id="header">
-        <span>Weather App</span>
+      <span>Weather App</span>
     </header>
 
+    <!-- Search box and past searches -->
     <aside>
-        <h1 id="citySearch">Search For A City:</h1>
-        <input id="input" type="text" placeholder="Search A City">
-        <button id="searchBtn" type="submit" class="dataOne">Search</button>
-        <ul id="pastSearches" class="lastLog">
-        </ul>
+      <h1 id="citySearch">Search For A City:</h1>
+      <input id="input" type="text" placeholder="Search A City" />
+      <button id="searchBtn" type="submit" class="dataOne">Search</button>
+      <ul id="pastSearches" class="lastLog"></ul>
     </aside>
 
+
     <main>
-        <div>
-            <h2 id="city currentDate"></h2>
-            <ul id="weatherInfo">
-                <li id="currentSearch"></li>
-                <li id="currentDate"></li>
-                <li id="currentIcon"></li>
-                <li id="currentTemp"></li>
-                <li id="currentWind"></li>
-                <li id="currentHumidity"></li>
-            </ul>
-        </div>
-        
-        <label id="forecast">5-Day Forecast:</label>
-        <div id="cards">
-            <card id="day1">
-                <ul id="weatherInfo">
-                    <li id="day1Date"></li>
-                    <li id="day1Icon"></li>
-                    <li id="day1Temp"></li>
-                    <li id="day1Wind"></li>
-                    <li id="day1Humidity"></li>
-                </ul>
-            </card>
-            <card id="day2">
-                <ul id="weatherInfo">
-                    <li id="day2Date"></li>
-                    <li id="day2Icon"></li>
-                    <li id="day2Temp"></li>
-                    <li id="day2Wind"></li>
-                    <li id="day2Humidity"></li>
-                </ul>
-            </card>
-            <card id="day3">
-                <ul id="weatherInfo">
-                    <li id="day3Date"></li>
-                    <li id="day3Icon"></li>
-                    <li id="day3Temp"></li>
-                    <li id="day3Wind"></li>
-                    <li id="day3Humidity"></li>
-                </ul>
-            </card>
-            <card id="day4">
-                <ul id="weatherInfo">
-                    <li id="day4Date"></li>
-                    <li id="day4Icon"></li>
-                    <li id="day4Temp"></li>
-                    <li id="day4Wind"></li>
-                    <li id="day4Humidity"></li>
-                </ul>
-            </card>
-            <card id="day5">
-                <ul id="weatherInfo">
-                    <li id="day5Date"></li>
-                    <li id="day5Icon"></li>
-                    <li id="day5Temp"></li>
-                    <li id="day5Wind"></li>
-                    <li id="day5Humidity"></li>
-                </ul>
-            </card>
-        </div>
+      <!-- Hero section for current days data -->
+      <hero>
+        <h2 id="city currentDate"></h2>
+        <ul id="weatherInfo">
+          <li id="currentSearch"></li>
+          <li id="currentDate"></li>
+          <li id="currentIcon"></li>
+          <li id="currentTemp"></li>
+          <li id="currentWind"></li>
+          <li id="currentHumidity"></li>
+        </ul>
+      </hero>
+
+      <!-- Cards for the 5 day forcast data -->
+      <label id="forecast">5-Day Forecast:</label>
+      <div id="cards">
+        <card id="day1">
+          <ul id="weatherInfo">
+            <li id="day1Date"></li>
+            <li id="day1Icon"></li>
+            <li id="day1Temp"></li>
+            <li id="day1Wind"></li>
+            <li id="day1Humidity"></li>
+          </ul>
+        </card>
+        <card id="day2">
+          <ul id="weatherInfo">
+            <li id="day2Date"></li>
+            <li id="day2Icon"></li>
+            <li id="day2Temp"></li>
+            <li id="day2Wind"></li>
+            <li id="day2Humidity"></li>
+          </ul>
+        </card>
+        <card id="day3">
+          <ul id="weatherInfo">
+            <li id="day3Date"></li>
+            <li id="day3Icon"></li>
+            <li id="day3Temp"></li>
+            <li id="day3Wind"></li>
+            <li id="day3Humidity"></li>
+          </ul>
+        </card>
+        <card id="day4">
+          <ul id="weatherInfo">
+            <li id="day4Date"></li>
+            <li id="day4Icon"></li>
+            <li id="day4Temp"></li>
+            <li id="day4Wind"></li>
+            <li id="day4Humidity"></li>
+          </ul>
+        </card>
+        <card id="day5">
+          <ul id="weatherInfo">
+            <li id="day5Date"></li>
+            <li id="day5Icon"></li>
+            <li id="day5Temp"></li>
+            <li id="day5Wind"></li>
+            <li id="day5Humidity"></li>
+          </ul>
+        </card>
+      </div>
     </main>
-    
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous"></script>
+
     <script
-    src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-    crossorigin="anonymous"
-></script>
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
     <script src="./Assets/script.js"></script>
-</body>
+  </body>
 </html>
