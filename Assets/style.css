@@ -57,6 +57,18 @@ main {
   padding: 20px;
 }
 
+#currentIcon, #currentTemp, #currentWind, #currentHumidity, #currentDate {
+  background-color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+#currentSearch {
+  font-weight: bold;
+  font-size: larger;
+  color: #3498db;
+}
+
 #weatherInfo {
   background: #f0f0f0;
   padding: 20px;
