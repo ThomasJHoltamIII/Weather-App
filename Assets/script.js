@@ -11,8 +11,8 @@ $(document).ready(function () {
 // Functions to pass data from API to the main day and 5-day car elements
 function updateWeatherAndForecast(cityInput) {
     var weatherAPI = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=imperial&appid=${key}`;
-
-    fetch(weatherAPI)
+    
+    fetch(weatherAPI) 
         .then(response => response.json())
         .then(data => {
             // Builds out the empty html elements for the hero section that displays current dates data
@@ -75,6 +75,7 @@ $('#searchBtn').on('click', function () {
         localStorage.cityTwo = cityInput;
         var checkTwo = localStorage.getItem('cityTwo');
         if (checkTwo) {
+            // if ($('#currentTemp').text().includes('Temperature'))
             $(".lastLog").append('<li class="reSearch" id="miniDataTwo"> Invalid! </li>').after(function () {
                 document.getElementById('miniDataTwo').innerHTML = localStorage.cityTwo
                 updateWeatherAndForecast(cityInput);
@@ -86,6 +87,7 @@ $('#searchBtn').on('click', function () {
         localStorage.cityThree = cityInput;
         var checkThree = localStorage.getItem('cityThree');
         if (checkThree) {
+            // if ($('#currentTemp').text().includes('Temperature'))
             $(".lastLog").append('<li class="reSearch" id="miniDataThree"> Invalid! </li>').after(function () {
                 document.getElementById('miniDataThree').innerHTML = localStorage.cityThree;
                 updateWeatherAndForecast(cityInput);
@@ -97,15 +99,19 @@ $('#searchBtn').on('click', function () {
         localStorage.cityFour = cityInput;
         var checkFour = localStorage.getItem('cityFour');
         if (checkFour) {
+            // if ($('#currentTemp').text().includes('Temperature'))
             $(".lastLog").append('<li id="miniDataFour"> Invalid! </li>').after(function () {
                 document.getElementById('miniDataFour').innerHTML = localStorage.cityFour;
                 updateWeatherAndForecast(cityInput);
             });
+            $('#searchBtn').toggleClass('dataFour dataFive');
+        }
 
         } else if ($(this).attr('class') === 'dataFive') {
             localStorage.cityFive = cityInput;
             var checkFive = localStorage.getItem('cityFive');
             if (checkFive) {
+                // if ($('#currentTemp').text().includes('Temperature'))
                 $(".lastLog").append('<li id="miniDataFive"> Invalid! </li>').after(function () {
                     document.getElementById('miniDataFive').innerHTML = localStorage.cityFive;
                     updateWeatherAndForecast(cityInput);
@@ -117,17 +123,20 @@ $('#searchBtn').on('click', function () {
             localStorage.citySix = cityInput;
             var checkSix = localStorage.getItem('citySix');
             if (checkSix) {
+                // if ($('#currentTemp').text().includes('Temperature'))
                 $(".lastLog").append('<li id="miniDataSix"> Invalid! </li>').after(function () {
                     document.getElementById('miniDataSix').innerHTML = localStorage.citySix;
                     updateWeatherAndForecast(cityInput);
+                    
                 });
-                $('#searchBtn').toggleClass('dataSix dataSeven');
-            }
+            $('#searchBtn').toggleClass('dataSix dataSeven'); 
+        }
 
         } else if ($(this).attr('class') === 'dataSeven') {
             localStorage.citySeven = cityInput;
             var checkSeven = localStorage.getItem('citySeven');
             if (checkSeven) {
+                // if ($('#currentTemp').text().includes('Temperature'))
                 $(".lastLog").append('<li id="miniDataSeven"> Invalid! </li>').after(function () {
                     document.getElementById('miniDataSeven').innerHTML = localStorage.citySeven;
                     updateWeatherAndForecast(cityInput);
@@ -139,6 +148,7 @@ $('#searchBtn').on('click', function () {
             localStorage.cityEight = cityInput;
             var checkEight = localStorage.getItem('cityEight');
             if (checkEight) {
+                // if ($('#currentTemp').text().includes('Temperature'))
                 $(".lastLog").append('<li class="reSearch" id="miniDataEight"> Invalid! </li>').after(function () {
                     document.getElementById('miniDataEight').innerHTML = localStorage.cityEight
                     updateWeatherAndForecast(cityInput);
@@ -147,7 +157,7 @@ $('#searchBtn').on('click', function () {
             }
         }
         }
-    });
+    );
 
     // a reSearch click function to reSearch past searches from the list, copy and pasted the previous functions and added a 2 to the variables so this functions independantly
     $('.lastLog').on('click', '.reSearch', function () {
@@ -195,3 +205,5 @@ $('#searchBtn').on('click', function () {
             .catch(error => console.error('Error fetching forecast data:', error));
     }
 });
+
+
