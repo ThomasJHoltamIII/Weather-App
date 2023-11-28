@@ -24,6 +24,9 @@ This Weather App allows travelers to check the weather outlook for multiple citi
 ### Application Preview
 ![Preview of the Weather Application showing Weather conditions and 5 day forecast.](/Assets/Weather_App.jpg) 
 
+### Application Link
+https://thomasjholtamiii.github.io/Weather-App/
+
 ### Technologies Used
 
 - HTML
@@ -36,6 +39,10 @@ This Weather App allows travelers to check the weather outlook for multiple citi
 
 1. Clone the repository to your local machine.
 2. Open the `index.html` file in your preferred web browser.
+
+or
+
+Open Git Page
 
 ### Credits
 This Weather App was created by myself, Thomas J Holtam III
